@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AgendaListViewCell.h"
 
-@interface AgendaListController : UIViewController
+@interface AgendaListController : UIViewController< UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *AgendaTableView;
 
 @end

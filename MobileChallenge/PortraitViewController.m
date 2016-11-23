@@ -50,7 +50,11 @@
     [_calendarManager setContentView:_calendarContentView];
     [_calendarManager setDate:[NSDate date]];
    // [ _calendarManager setContentView:_AgendaListView];
-    
+    AgendaListController *agendaL = [ [AgendaListController alloc] initWithNibName:@"AgendaListController" bundle:nil  ];
+    agendaL.view.frame = self.AgendaListView.frame;
+    [self  addChildViewController:agendaL];
+    [self.AgendaListView  addSubview:agendaL.AgendaTableView];
+    [agendaL  didMoveToParentViewController:self ];
     _calendarMenuView.scrollView.scrollEnabled = NO; // Scroll not supported with JTVerticalCalendarView
 }
 

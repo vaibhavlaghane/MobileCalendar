@@ -13,4 +13,5 @@
 @property NSInteger numOfAgendas;
 @property (nonatomic,strong) NSString *header;
 @property (atomic,strong) NSMutableArray *listOfAgenda;
+@property (weak, nonatomic) IBOutlet UILabel *cellLabel;
 @end
